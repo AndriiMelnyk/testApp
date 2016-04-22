@@ -1,0 +1,10 @@
+<div class="subMenuWrapper" >
+    <ul ng-style="subLeft">
+        <span class="sub" ng-repeat="item in $root.collection" ng-click="itemClicked($index)">
+            <a ng-click="toggleMenu($index)" class="btn fullwidth" ui-sref="{{item.state}}">
+                <div ng-class="{ 'selected-class-name': $index == $root.selectedIndex } " class="col-md-3 subMenuBtns">{{ item.name }}</div>
+            </a>
+        </span>
+    </ul>
+</div>
+<div style="clear:both;"></div>

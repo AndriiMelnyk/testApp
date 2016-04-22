@@ -1,0 +1,136 @@
+.col-md-10.col-md-offset-1.block-wrapper{
+	position: absolute;
+	z-index: 10;
+	height: 551px;
+	background-color: #fff;
+	opacity: 0.5;
+	margin-top: 50px;
+	display: none;
+}
+.col-md-10.col-md-offset-1.header{
+	background-color: #E0E0E0;
+	margin-top:50px;
+	height: 100px;
+	padding: 0;
+	border: 1px solid black;
+	border-bottom: none;
+}
+.main.menu-button.btn{
+	position: absolute;
+	z-index: 20;
+	margin: 10px 0 0 10px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+.header-content {
+	clear: both;
+	padding: 15px 0 0 20px;
+	margin-top: 40px;
+}
+.nav-wrapper.col-md-10.col-md-offset-1{
+	padding: 0;
+}
+.nav-wrapper div {
+	border-right: 1px solid black;
+	height: 60px;
+	background-color:#E0E0E0; 
+	padding-top: 20px;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+.nav-wrapper div :last-child{
+	border-right: none;
+}
+.nav-wrapper div:hover{
+	background-color: #E0E0E0;
+}
+.nav-wrapper{
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+}
+.col-md-10.col-md-offset-1.animals-content{
+	border: 1px solid black;
+	height: 350px;
+	padding: 0;
+}
+.footer-content {
+	background-color: #E0E0E0;
+	border: 1px solid black;
+	border-top: none;
+	padding: 0;
+}
+.footer-content h4{
+	float: left;
+	padding-left: 5px;
+}
+.footer-help-button{
+	margin: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+#form_email{
+	margin-top:50px;
+	margin-bottom: 15px;
+}
+.col-md-6.col-md-offset-3.user-message{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.success-message{
+	margin-top: 30px;
+	color: #4CB82E;
+}
+.err-message{
+	color: #E31216;
+}
+.contactUs-send-button{
+	margin-top: 30px;
+}
+.sub a{
+	width: 100%;
+	border-bottom: 1px solid black;
+	border-radius: 0;
+	text-align: left;
+	font-weight: bold;
+	color: black;
+	padding: 0;
+}
+.subMenuWrapper ul{
+	list-style-type: none;
+	padding: 0;
+}
+.subMenuWrapper{
+	height: 550px;
+	width: 330px;
+	top:0;
+	z-index: 20;
+	background-color: #E0E0E0;
+	position: absolute;
+	left: 0;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+.sub{
+	list-style-type: none;
+}
+.sub div{
+	width: 100%;
+	padding: 10px;
+}
+.col-md-3.selected-class-name,.col-md-3.selected-class-name:hover {
+	background-color: gray ;
+	color: #E0E0E0;
+}
+.nav-wrapper a{
+	color: black;
+}
+.nav-wrapper a:hover{
+	color: #524F4E;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}

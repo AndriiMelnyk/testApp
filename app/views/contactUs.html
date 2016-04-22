@@ -1,0 +1,25 @@
+<div ng-controller="ContactUsCtrl">
+    <form name="myForm" novalidate>
+        <div>
+            <input type="text" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" class="col-md-6 col-md-offset-3" ng-model="user.email" name="email" placeholder="Enter Email" id="form_email" ng-required="true" />
+            <div ng-messages="myForm.email.$error" class="col-md-3 col-md-offset-5 err-message">
+                <div ng-message="required" ng-if="!user.email.$pristine">Email is required</div>
+                <div ng-message="pattern">Please enter a valid email address!</div>
+            </div>
+        </div>
+
+        <div>
+            <textarea type="text" ng-minlength="10" ng-model="user.message" name="message" placeholder="Message" class="col-md-6 col-md-offset-3 user-message" ng-required="true"></textarea>
+
+            <div ng-messages="myForm.message.$error" class="col-md-3 col-md-offset-5 err-message">
+                <div ng-message="required" ng-if="!user.message.$pristine">Message is required!</div>
+                <div ng-message="minlength">Your message is too short!</div>
+            </div>
+        </div>
+        <div ng-if="showMessage" class="col-md-5 col-md-offset-3 text-center success-message">
+            <p>Your message {{user.message}}</p>
+            <p>and your email {{user.email}} successfully send</p>
+        </div>
+        <button ng-click="send()" ng-disabled="myForm.$invalid" class="col-md-1 contactUs-send-button">Send</button>
+    </form>
+</div>

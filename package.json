@@ -1,0 +1,19 @@
+{
+  "name": "bvblogic-app",
+  "version": "1.0.0",
+  "description": "Testing task",
+  "main": "app.js",
+  "scripts": {
+    "start": "gulp index && node app.js"
+  },
+  "author": "Andrii Melnyk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "latest"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.0.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}

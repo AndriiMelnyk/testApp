@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My index</title>
+	<!-- inject:css -->
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/angular-block-ui/dist/angular-block-ui.min.css">
+	<!-- endinject -->
+	<base href="/"/>
+
+</head>
+<body ng-app="app">
+	<div  block-ui="myBlock" id="clickMe" class="block-wrapper col-md-10 col-md-offset-1"></div>
+	<!-- *****HEADER***** -->
+	<header  ng-controller="MenuController" class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 header">
+				<button class="main menu-button btn" ng-click="showSubMenu()"class="pull-left menu-button">menu</button>
+				<!-- </div>
+				-->
+				<menu visible="showMenu" ng-show='showMenu'></menu>
+				<h4 class="text-left header-content">Animals(test app)</h4>
+			</div>
+		</div>
+	</header>
+	<!-- *****HEADER END***** -->
+
+	<!-- *****NAV***** -->
+	<nav class="container-fluid" ng-controller="navCtrl">
+		<div class="row">
+
+			<div class="col-md-10 col-md-offset-1 nav-wrapper">
+				<span ng-repeat="item in collection" ng-click="itemClicked($index)">
+					<a ui-sref="{{item.state}}">
+						<div ng-class="{ 'selected-class-name': $index == selectedIndex }" class="col-md-3">{{ item.name }}</div>
+					</a>
+				</span>
+			</div>
+		</div>
+	</nav>
+	<!-- *****NAV END***** -->
+
+	<!-- *****CONTENT***** -->
+	<section class="container-fluid">
+		<div class="row">
+			<aside ui-view class="col-md-10 col-md-offset-1 animals-content"></aside>
+		</div>
+	</section>
+	<!-- *****CONTENT END***** -->
+
+	<!-- *****FOOTER***** -->
+	<footer ng-controller='footerCtrl' class="container-fluid">
+		<script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Help modal</h3>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+        <a target="_blank" href="https://www.google.com.ua/?gfe_rd=cr&ei=Nj8XV5juKZGDyAXI1iQ#q=help"><button class="btn btn-primary col-md-2 col-md-offset-3" type="button" ng-click="ok()">Yes</button></a>
+            <button class="btn btn-warning col-md-2 col-md-offset-2" type="button" ng-click="cancel()">No</button>
+        </div>
+    </script>
+		<section class="row">
+			<section class="col-md-10 col-md-offset-1 footer-content">
+				<h4>Animals footer (angular test app)</h4>
+				<button ng-click="open()" class="pull-right footer-help-button">help</button>
+			</section>
+		</section>
+	</footer>
+	<!-- *****FOOTER END***** -->
+
+	<!-- inject:js -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="bower_components/angular-block-ui/dist/angular-block-ui.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="app/app.module.js"></script>
+	<script src="app/app.config.js"></script>
+	<script src="app/controllers/app.contactUs.controller.js"></script>
+	<script src="app/controllers/app.footer.controller.js"></script>
+	<script src="app/controllers/app.menu.controller.js"></script>
+	<script src="app/controllers/app.nav.controller.js"></script>
+	<script src="app/directives/app.menuDirective.js"></script>
+	<!-- endinject -->
+</body>
+</html>

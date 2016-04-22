@@ -1,0 +1,15 @@
+{
+  "name": "bvblogic-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "1.5.5",
+    "bootstrap": "3.3.6",
+    "jquery": "2.2.3",
+    "angular-ui-router": "0.2.18",
+    "angular-bootstrap": "latest",
+    "angular-messages": "1.5.5",
+    "angular-route": "1.5.5",
+    "angular-block-ui": "0.2.2",
+    "jquery": "1.11.1"
+  }
+}
